@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap");
+
+:root {
+  --bg: #f7f3eb;
+  --bg-soft: #efe7db;
+  --card: #fff9f0;
+  --accent: #0f766e;
+  --accent-strong: #14532d;
+  --ink: #1f2937;
+  --muted: #5b6475;
+  --warning: #9a3412;
+  --border: #d8cdb9;
+  --shadow: 0 10px 30px rgba(63, 55, 38, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(15, 118, 110, 0.14), transparent 40%),
+    radial-gradient(circle at 82% 7%, rgba(153, 27, 27, 0.1), transparent 35%),
+    linear-gradient(155deg, var(--bg) 0%, #e8ddcd 100%);
+}
+
+.app-shell {
+  width: min(1200px, 94vw);
+  margin: 1.2rem auto 2rem;
+  display: grid;
+  gap: 1rem;
+  animation: rise 400ms ease-out;
+}
+
+.hero {
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: linear-gradient(120deg, #0f766e, #166534);
+  color: #f7fcfb;
+  box-shadow: var(--shadow);
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: "Merriweather", serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.hero p {
+  margin: 0.55rem 0 0;
+  font-size: 1.02rem;
+  max-width: 60ch;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.controls {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 0.75rem;
+  align-items: end;
+}
+
+.controls label {
+  display: grid;
+  gap: 0.25rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.62rem 0.7rem;
+  border: 1px solid #b8ab93;
+  border-radius: 10px;
+  background: #fffefc;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  color: #fff;
+  background: var(--accent);
+  cursor: pointer;
+  transition: transform 140ms ease, background 140ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: var(--accent-strong);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1rem;
+}
+
+.ingest {
+  padding: 1rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.ingest h2 {
+  margin: 0;
+  font-family: "Merriweather", serif;
+}
+
+.ingest textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.segments {
+  padding: 1rem;
+}
+
+.segments h2,
+.sidebar h3 {
+  margin-top: 0;
+  font-family: "Merriweather", serif;
+}
+
+.segment {
+  border: 1px solid #d2c4ad;
+  border-radius: 14px;
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  background: #fffdf9;
+  transition: border-color 140ms ease, transform 140ms ease;
+}
+
+.segment.is-selected {
+  border-color: #0f766e;
+  transform: translateX(3px);
+}
+
+.source {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.segment textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.sidebar {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.sidebar .card {
+  padding: 0.85rem;
+}
+
+.suggestion {
+  width: 100%;
+  text-align: left;
+  display: grid;
+  gap: 0.2rem;
+  margin-bottom: 0.45rem;
+}
+
+.suggestion span {
+  color: #d1f3ee;
+  font-size: 0.82rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.misspelling {
+  border-left: 4px solid var(--warning);
+  padding-left: 0.55rem;
+  margin-bottom: 0.55rem;
+  display: grid;
+  gap: 0.12rem;
+}
+
+.status {
+  background: var(--bg-soft);
+  border: 1px dashed #b7a58c;
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem;
+  color: #3f3a31;
+}
+
+.inline-status {
+  margin: 0;
+  padding: 0.65rem 0.8rem;
+  border-radius: 10px;
+  background: #e4f6f4;
+  color: #0c4a45;
+  font-weight: 600;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 980px) {
+  .controls {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 1.1rem;
+  }
+}

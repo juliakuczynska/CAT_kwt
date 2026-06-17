@@ -1,0 +1,53 @@
+{
+  "translationMemory": [
+    {
+      "id": "773c87a1-e294-48cc-9741-a22603cbf924",
+      "sourceLang": "en",
+      "targetLang": "pl",
+      "sourceText": "Please press the emergency stop button.",
+      "targetText": "proszę kliknij przycisk zatrzymania awaryjnego",
+      "context": "safety",
+      "createdAt": "2026-06-17T15:56:30.166Z"
+    },
+    {
+      "id": "138ccf70-38e7-4a23-aa53-f0648bf48bae",
+      "sourceLang": "en",
+      "targetLang": "pl",
+      "sourceText": "Please press the emergency stop button.",
+      "targetText": "Naciśnij przycisk zatrzymania awaryjnego.",
+      "context": "safety",
+      "createdAt": "2026-06-17T15:54:12.652Z"
+    },
+    {
+      "id": "38318a14-1ac9-4780-9d8f-94c468cd3b35",
+      "sourceLang": "en",
+      "targetLang": "pl",
+      "sourceText": "Please press the emergency stop button.",
+      "targetText": "proszę naciśnij przycisk ratunku",
+      "context": "safety",
+      "createdAt": "2026-06-17T15:51:46.731Z"
+    }
+  ],
+  "glossary": [
+    {
+      "id": "9a877d88-c467-43cc-b52c-55b115c8e817",
+      "sourceLang": "en",
+      "targetLang": "pl",
+      "sourceTerm": "emergency stop",
+      "targetTerm": "zatrzymanie awaryjne",
+      "domain": "manual",
+      "note": "safety",
+      "createdAt": "2026-06-17T15:56:37.224Z"
+    },
+    {
+      "id": "148be7d8-4b46-4cac-8c7a-aa755bd392f1",
+      "sourceLang": "en",
+      "targetLang": "pl",
+      "sourceTerm": "emergency stop",
+      "targetTerm": "zatrzymanie awaryjne",
+      "domain": "manual",
+      "note": "safety",
+      "createdAt": "2026-06-17T15:55:43.259Z"
+    }
+  ]
+}
